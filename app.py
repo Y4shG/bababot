@@ -15,7 +15,7 @@ ollama.base_url = ollama_base_url
 today = datetime.date.today()
 date_str = today.strftime("%d.%m.%y")  # e.g. "05.08.25"
 
-# 2. Construct the URL dynamically
+# 2. Construct the URL automagically (ooh ahh) if this doesn't work its most likely due to that babamurli isn't using the same url instruction, the current date format is listed below.
 base_url = "https://babamurli.com/01.%20Daily%20Murli/02.%20English/01.%20Eng%20Murli%20-%20Htm/"
 filename = f"{date_str}-E.htm"
 url = base_url + filename
