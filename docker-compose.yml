@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    entrypoint: >
+      /bin/bash -c "
+        ollama serve &
+        sleep 5 &&
+        ollama pull qwen2.5:0.5b &&
+        ollama pull nomic-embed-text &&
+        tail -f /dev/null
+      "
+
+  murli-app:
+    build: ./murli-app
+    depends_on:
+      - ollama
+    ports:
+      - "7860:7860"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+
+volumes:
+  ollama-data:
