@@ -1,0 +1,6 @@
+gradio
+ollama
+beautifulsoup4
+langchain
+chromadb
+langchain-community
