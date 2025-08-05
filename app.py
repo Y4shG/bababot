@@ -1,3 +1,4 @@
+import os
 import datetime
 import gradio as gr
 import ollama
@@ -5,6 +6,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings
+
+# Set ollama base URL from env var, fallback to localhost (for local runs)
+ollama_base_url = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+ollama.base_url = ollama_base_url
 
 # 1. Generate date string in format "dd.mm.yy"
 today = datetime.date.today()
