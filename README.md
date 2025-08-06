@@ -37,8 +37,8 @@ A Gradio-based question-answering app for daily Murli articles that uses:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/murli-qa.git
-cd murli-qa/bababot
+git clone https://github.com/y4shg/bababot.git
+cd bababot
 ```
 
 ---
