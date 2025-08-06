@@ -71,10 +71,11 @@ def ollama_llm(question, context):
     )
     return response['message']['content']
 
-# Retrieval + LLM
+# Retrieval + LLM with top 2 docs only
 def rag_chain(question):
     retrieved_docs = retriever.get_relevant_documents(question)
-    formatted_context = "\n\n".join(doc.page_content for doc in retrieved_docs)
+    top_docs = retrieved_docs[:2]  # limit to 2 documents
+    formatted_context = "\n\n".join(doc.page_content for doc in top_docs)
     return ollama_llm(question, formatted_context)
 
 # Gradio app
