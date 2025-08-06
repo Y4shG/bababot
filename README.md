@@ -1,5 +1,7 @@
 
 # Murli Q&A App
+![Banner saying Hello Im Yash](/images/github-header-banner.png/)
+
 
 A Gradio-based question-answering app for daily Murli articles that uses:
 
