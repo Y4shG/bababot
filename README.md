@@ -1,5 +1,6 @@
 
 # Murli Q&A App
+![Static Badge](https://img.shields.io/badge/Latest%2520Build%25200.1-passing-green)
 ![Banner saying Hello Im Yash](/images/github-header-banner.png/)
 
 
