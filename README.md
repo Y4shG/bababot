@@ -224,8 +224,8 @@ MIT License
 
 ## Contact
 
-For questions or issues, open an issue or contact: your-email@example.com
+For questions or issues, open an issue or contact: vovxb@vovxb.fun
 
 ---
 
-Thank you for using Murli Q&A! 🙏
+Om shanti!
